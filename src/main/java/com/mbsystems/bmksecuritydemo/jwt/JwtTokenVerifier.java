@@ -36,12 +36,12 @@ public class JwtTokenVerifier extends OncePerRequestFilter {
         String authorizationHeader = request.getHeader( "Authorization" );
 
         if ( StringUtils.isEmpty( authorizationHeader ) || !authorizationHeader.startsWith( "Bearer " ) ) {
-            filterChain.doFilter( request, response );
+                filterChain.doFilter( request, response );
             return;
         }
 
         try {
-            String secretkey = "securesecuresecuresecuresecuresecuresecuresecure";
+            String secretkey = "securesecuresecuresecuresecuresecuresecurebasilsecurebasilsecurebasilsecurebasilsecure";
 
             String token =  authorizationHeader.replace( "Bearer ", "" );
 

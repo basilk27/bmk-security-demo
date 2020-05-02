@@ -13,6 +13,8 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
@@ -24,7 +26,7 @@ import static com.mbsystems.bmksecuritydemo.security.ApplicationUserRole.STUDENT
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
+    public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final ApplicationUserDetailService userDetailsService;
     private final PasswordEncoder passwordEncoder;

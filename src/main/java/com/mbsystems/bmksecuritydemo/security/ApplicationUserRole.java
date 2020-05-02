@@ -9,7 +9,8 @@ import java.util.stream.Collectors;
 
 import static com.mbsystems.bmksecuritydemo.security.ApplicationUserPermission.*;
 
-    public enum ApplicationUserRole {
+public enum ApplicationUserRole {
+
     STUDENT( Sets.newHashSet() ),
     ADMIN( Sets.newHashSet( COURSE_READ, COURSE_WRITE, STUDENT_READ, STUDENT_WRITE )),
     ADMINTRAINEE( Sets.newHashSet( COURSE_READ, STUDENT_READ ));
